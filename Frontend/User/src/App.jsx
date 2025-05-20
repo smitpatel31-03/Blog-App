@@ -26,7 +26,7 @@ function App() {
     <div className="relative min-h-screen bg-[url('/svg/bg.svg')] bg-cover bg-center flex flex-col items-center justify-center px-4">
       
       {/* Decorations */}
-      <img src="/svg/cap.svg" className="absolute top-4 left-40 w-40 sm:w-1 sm:h-1 " alt="cap" />
+      <img src="/svg/cap.svg" className="absolute top-4 left-40 w-40 sm:w-1  " alt="cap" />
       <img src="/svg/pencil1.svg" className="absolute top-10 right-[450px] w-35 sm:w-1 sm:h-1" alt="pencil" />
       <img src="/svg/notebook.svg" className="absolute top-1 right-[100px] w-60 sm:w-1 sm:h-1" alt="notebook" />
       <img src="/svg/kids1.svg" className="absolute top-[130px] left-0 w-70 sm:w-1 sm:h-1" alt="kids1" />
