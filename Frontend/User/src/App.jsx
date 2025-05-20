@@ -26,18 +26,18 @@ function App() {
     <div className="relative min-h-screen bg-[url('/svg/bg.svg')] bg-cover bg-center flex flex-col items-center justify-center px-4">
       
       {/* Decorations */}
-      <img src="/svg/cap.svg" className="absolute top-4 left-40 w-40 sm:w-10px" alt="cap" />
-      <img src="/svg/pencil1.svg" className="absolute top-10 right-[450px] w-35 sm:w-10px" alt="pencil" />
-      <img src="/svg/notebook.svg" className="absolute top-1 right-[100px] w-60 sm:w-10px" alt="notebook" />
-      <img src="/svg/kids1.svg" className="absolute top-[130px] left-0 w-70 sm:w-10px" alt="kids1" />
-      <img src="/svg/pencil2.svg" className="absolute top-50 right-[30px] w-50 sm:w-10px" alt="pencil2" />
-      <img src="/svg/pencil3.svg" className="absolute top-80 left-[30px] w-60 sm:w-10px" alt="pencil3" />
-      <img src="/svg/fyingNotebook.svg" className="absolute top-90 right-[30px] w-20 scale-x-[-1] sm:w-10px" alt="fyingNotebook" />
-      <img src="/svg/kids2.svg" className="absolute bottom-2 left-4 w-90 sm:w-1" alt="kid girl" />
-      <img src="/svg/kids3.svg" className="absolute bottom-4 right-4 w-90 sm:w-1" alt="kids2" />
-      <img src="/svg/comaps.svg" className="absolute bottom-40 left-200 w-40  sm:w-1" alt="kids2" />
-      <img src="/svg/brush.svg" className="absolute bottom-10 left-210 w-40 sm:w-1" alt="kids2" />
-      <img src="/svg/hands.svg" className="absolute bottom-15 left-130 w-40 sm:w-1" alt="kids2" />
+      <img src="/svg/cap.svg" className="absolute top-4 left-40 w-40 sm:w-1 h-1 " alt="cap" />
+      <img src="/svg/pencil1.svg" className="absolute top-10 right-[450px] w-35 sm:w-1 h-1" alt="pencil" />
+      <img src="/svg/notebook.svg" className="absolute top-1 right-[100px] w-60 sm:w-1 h-1" alt="notebook" />
+      <img src="/svg/kids1.svg" className="absolute top-[130px] left-0 w-70 sm:w-1 h-1" alt="kids1" />
+      <img src="/svg/pencil2.svg" className="absolute top-50 right-[30px] w-50 sm:w-1 h-1" alt="pencil2" />
+      <img src="/svg/pencil3.svg" className="absolute top-80 left-[30px] w-60 sm:w-1 h-1" alt="pencil3" />
+      <img src="/svg/fyingNotebook.svg" className="absolute top-90 right-[30px] w-20 scale-x-[-1] sm:w-1 h-1" alt="fyingNotebook" />
+      <img src="/svg/kids2.svg" className="absolute bottom-2 left-4 w-90 sm:w-1 h-1" alt="kid girl" />
+      <img src="/svg/kids3.svg" className="absolute bottom-4 right-4 w-90 sm:w-1 h-1" alt="kids2" />
+      <img src="/svg/comaps.svg" className="absolute bottom-40 left-200 w-40  sm:w-1 h-1" alt="kids2" />
+      <img src="/svg/brush.svg" className="absolute bottom-10 left-210 w-40 sm:w-1 h-1" alt="kids2" />
+      <img src="/svg/hands.svg" className="absolute bottom-15 left-130 w-40 sm:w-1 h-1" alt="kids2" />
 
       {/* Main Content */}
       <div className="mt-[-150px]">
