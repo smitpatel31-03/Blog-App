@@ -1,48 +1,29 @@
-import React, { useState, useEffect } from 'react';
-import Service from '../src/services/conf.js';
+import React,{ useState,useEffect} from 'react'
+import Service from '../src/services/conf.js'
+
 
 function EmailPage() {
-  const [allSubscriberMail, setAllSubscriberMail] = useState([]);
-  const [loading, setLoading] = useState(true);
-  const [fetchError, setFetchError] = useState(null);
+const [allSubscriberMail, setAllSubscriberMail] = useState(null);
 
   useEffect(() => {
     const fetchDetails = async () => {
       try {
-        const response = await Service.getAllSubmail();
-        console.log('Fetched subscribers:', response.data || response);
-        setAllSubscriberMail(response.data || response);
+        const data = await Service.getAllSubmail();
+        console.log('data:', data,data);
+        setAllSubscriberMail(data);
       } catch (error) {
-        console.error('Failed to fetch subscriber emails:', error);
-        setFetchError(error.message || 'Failed to fetch data');
-      } finally {
-        setLoading(false);
+        console.error('Failed to fetch blog details:', error);
       }
     };
+      fetchDetails();
 
-    fetchDetails();
 
-    console.log("allSubscriberMail:",allSubscriberMail);
-    
-  }, []);
+      console.log("allSubscriberMail :",allSubscriberMail);
+      
+  }, [allSubscriberMail]);
 
-  if (loading) return <p>Loading...</p>;
-  if (fetchError) return <p>Error: {fetchError}</p>;
-
-  return (
-    <div>
-      <h1>Subscriber Emails</h1>
-      {allSubscriberMail.length === 0 ? (
-        <p>No subscribers found.</p>
-      ) : (
-        <ul>
-          {allSubscriberMail.map((item) => (
-            <li key={item._id}>{item.email}</li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
+  return <h1>hii</h1>
+  
 }
 
-export default EmailPage;
+export default EmailPage
