@@ -17,12 +17,14 @@ export class AuthServices{
         try {
             
             const response = await this.axiosInstance.post(`/register`,{email, password, name},{withCredentials:true})
+            console.log("response :",response);
             const {accessToken, refreshToken} = response.data
 
     
             localStorage.setItem("accessToken",accessToken)
             localStorage.setItem("refreshToken",refreshToken)
 
+            
             return response.data
             
         } catch (error) {
