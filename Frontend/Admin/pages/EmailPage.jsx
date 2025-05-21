@@ -9,7 +9,7 @@ const [allSubscriberMail, setAllSubscriberMail] = useState(null);
     const fetchDetails = async () => {
       try {
         const data = await Service.getAllSubmail();
-        console.log('data:', data);
+        console.log('data:', data,data);
         setAllSubscriberMail(data);
       } catch (error) {
         console.error('Failed to fetch blog details:', error);
@@ -18,7 +18,7 @@ const [allSubscriberMail, setAllSubscriberMail] = useState(null);
       fetchDetails();
       console.log("allSubscriberMail :",allSubscriberMail);
       
-  }, []);
+  }, [allSubscriberMail]);
   return (
     <div>
       hii
