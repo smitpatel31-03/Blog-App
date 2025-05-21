@@ -16,10 +16,12 @@ const [allSubscriberMail, setAllSubscriberMail] = useState(null);
       }
     };
 
-    if (id) {
+ 
       fetchDetails();
-    }
-  }, [id]);
+    
+      console.log("allSubscriberMail :",allSubscriberMail);
+      
+  }, []);
   return (
     <div>
       hii
