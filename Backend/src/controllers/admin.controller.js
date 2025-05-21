@@ -486,7 +486,7 @@ const deleteBlog = asyncHandler(async (req,res)=>{
     const deleteBlog = await Blog.findByIdAndDelete(BlogId)
 
     res
-        .status(200)
+        .status(201)
         .json(
             new ApiResponse(
                 201,
