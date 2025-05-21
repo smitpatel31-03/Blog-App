@@ -32,14 +32,7 @@ export class AuthServices{
 
     async loginAdmin({email, password}){
         try {
-            
-            const response = await this.axiosInstance.post(
-                "/login",
-                { email, password },
-                { withCredentials: true }
-              );
-
-              console.log("response :",response);
+            const response = await this.axiosInstance.post(`login`, { email, password },{ withCredentials: true });
               
             const {accessToken, refreshToken} = response.data.data
 
