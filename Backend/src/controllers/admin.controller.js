@@ -474,7 +474,7 @@ const getAllAubscriberMail = asyncHandler(async (req, res) => {
         .json(
             new ApiResponse(
                 201,
-                AllAubscriberMail[0],
+                AllAubscriberMail,
                 "Blog Details"
             )
         )
