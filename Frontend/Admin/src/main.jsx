@@ -15,7 +15,7 @@ const router = createBrowserRouter([
         path:"/",
         element:(
             <AuthLayout authentication={true}>
-            <Login />
+            <Home />
           </AuthLayout>
         )
       },
