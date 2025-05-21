@@ -84,7 +84,6 @@ export class Services{
     async getAllSubmail(){
         try {
             const headers = authServices.getAuthHeaders()
-            console.log("response");
             const response = await this.axiosInstance.get(`/all-subscriber-mail`,{headers})
             
             return response.data

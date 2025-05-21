@@ -8,7 +8,7 @@ const [allSubscriberMail, setAllSubscriberMail] = useState(null);
   useEffect(() => {
     const fetchDetails = async () => {
       try {
-        const data = await Service.getBlogsDetails(id);
+        const data = await Service.getAllSubmail();
         console.log('data:', data);
         setAllSubscriberMail(data);
       } catch (error) {
