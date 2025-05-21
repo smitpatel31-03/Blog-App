@@ -15,10 +15,7 @@ const [allSubscriberMail, setAllSubscriberMail] = useState(null);
         console.error('Failed to fetch blog details:', error);
       }
     };
-
- 
       fetchDetails();
-    
       console.log("allSubscriberMail :",allSubscriberMail);
       
   }, []);

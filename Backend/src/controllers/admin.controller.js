@@ -6,6 +6,7 @@ import { ApiResponse } from "../utils/ApiResponse.js"
 import jwt from "jsonwebtoken"
 import { uploadOnCloudnary } from "../utils/cloudinary.js"
 import mongoose from "mongoose"
+import { Email } from "../model/email.model.js"
 
 const generateAccessAndRefreshToken = async (AdmnId) => {
 
@@ -458,7 +459,7 @@ const getBlogDetails = asyncHandler(async (req, res) => {
 
 const getAllAubscriberMail = asyncHandler(async (req, res) => {
 
-    const AllAubscriberMail = await Blog.aggregate([
+    const AllAubscriberMail = await Email.aggregate([
         {
             $project: {
                 email: 1,
