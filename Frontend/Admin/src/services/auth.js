@@ -18,14 +18,14 @@ export class AuthServices{
             
             const response = await this.axiosInstance.post(`/register`,{email, password, name},{withCredentials:true})
             console.log("response :",response);
-            const {accessToken, refreshToken} = response.data
+            const {accessToken, refreshToken} = response.data.data
 
     
             localStorage.setItem("accessToken",accessToken)
             localStorage.setItem("refreshToken",refreshToken)
 
             
-            return response.data
+            return response.data.data
             
         } catch (error) {
             throw error.response?.data?.message || "Registration Failed"
