@@ -21,57 +21,78 @@ function App() {
   };
 
   return (
-  
-<div className="relative w-full h-screen bg-white overflow-hidden">
+    <div className="relative min-h-screen bg-[url('/svg/bg.svg')] bg-cover bg-center flex flex-col items-center justify-center px-4 py-12 sm:py-8">
 
-  {/* Background SVGs */}
-  <img src="/svg/bg.svg" alt="bg" className="absolute inset-0 w-full h-full object-cover opacity-10 z-0" />
+      {/* Decorative Images (Responsive with vw units) */}
+      <img src="/svg/cap.svg" alt="cap"
+        className="absolute top-4 left-4"
+        style={{ width: '20vw', minWidth: '24px', maxWidth: '48px' }} />
 
-  {/* Decorative SVGs */}
-  <img src="/svg/cap.svg" alt="cap" className="absolute top-4 left-4 w-16 sm:w-20 md:w-24 lg:w-28" />
-  <img src="/svg/brush.svg" alt="brush" className="absolute top-8 right-8 w-14 sm:w-20 md:w-24 lg:w-28" />
-  <img src="/svg/fyingNotebook.svg" alt="flying notebook" className="absolute bottom-10 right-10 w-16 sm:w-24 lg:w-32" />
-  <img src="/svg/notebook.svg" alt="notebook" className="absolute bottom-20 left-10 w-14 sm:w-20 md:w-24 lg:w-28" />
-  <img src="/svg/kids1.svg" alt="kids1" className="absolute bottom-4 left-4 w-14 sm:w-20 md:w-24 lg:w-28" />
-  <img src="/svg/kids2.svg" alt="kids2" className="absolute bottom-4 right-4 w-14 sm:w-20 md:w-24 lg:w-28" />
-  <img src="/svg/kids3.svg" alt="kids3" className="absolute top-4 right-20 w-14 sm:w-20 md:w-24 lg:w-28" />
-  <img src="/svg/hands.svg" alt="hands" className="absolute top-24 left-6 w-20 sm:w-28 md:w-36 lg:w-44" />
-  <img src="/svg/pencil1.svg" alt="pencil1" className="absolute top-40 right-6 w-12 sm:w-16 md:w-20 lg:w-24" />
-  <img src="/svg/pencil2.svg" alt="pencil2" className="absolute bottom-40 left-6 w-12 sm:w-16 md:w-20 lg:w-24" />
-  <img src="/svg/pencil3.svg" alt="pencil3" className="absolute bottom-10 right-24 w-12 sm:w-16 md:w-20 lg:w-24" />
-  <img src="/svg/comaps.svg" alt="compass" className="absolute top-1/2 left-0 w-10 sm:w-14 md:w-16 lg:w-20" />
+      <img src="/svg/kids1.svg" alt="boy with sun"
+        className="absolute top-12 left-16"
+        style={{ width: '8vw', minWidth: '32px', maxWidth: '60px' }} />
 
-  {/* Center Heading */}
-  <div className="absolute inset-0 flex flex-col justify-center items-center text-center z-10 px-4">
-    <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold text-red-600 mb-4">
-      GET READY!
-    </h1>
-    <p className="text-sm sm:text-base text-gray-700 mb-6">
-      Something amazing is coming soon
-    </p>
+      <img src="/svg/notebook.svg" alt="ruler color"
+        className="absolute top-2 right-4"
+        style={{ width: '8vw', minWidth: '32px', maxWidth: '60px' }} />
 
-    {/* Email input */}
-    <div className="flex items-center w-full max-w-md rounded-full bg-white px-4 py-2 shadow-md">
-      <span className="mr-2 text-gray-500">
-        <i className="fas fa-envelope"></i>
-      </span>
-      <input
-        type="email"
-        placeholder="Enter your email"
-        className="flex-grow focus:outline-none text-sm sm:text-base"
-      />
+      <img src="/svg/pencil2.svg" alt="glasses pencil"
+        className="absolute top-28 left-6"
+        style={{ width: '6vw', minWidth: '24px', maxWidth: '50px' }} />
+
+      <img src="/svg/pencil1.svg" alt="pencil"
+        className="absolute top-20 right-10"
+        style={{ width: '5vw', minWidth: '20px', maxWidth: '40px' }} />
+
+      <img src="/svg/fyingNotebook.svg" alt="kids in book"
+        className="absolute top-36 right-4"
+        style={{ width: '10vw', minWidth: '40px', maxWidth: '70px' }} />
+
+      <img src="/svg/kids2.svg" alt="kid left"
+        className="absolute bottom-4 left-4"
+        style={{ width: '12vw', minWidth: '48px', maxWidth: '80px' }} />
+
+      <img src="/svg/hands.svg" alt="paint hands"
+        className="absolute bottom-4 left-32"
+        style={{ width: '6vw', minWidth: '24px', maxWidth: '50px' }} />
+
+      <img src="/svg/brush.svg" alt="basket"
+        className="absolute bottom-10 left-1/2 transform -translate-x-1/2"
+        style={{ width: '6vw', minWidth: '24px', maxWidth: '50px' }} />
+
+      <img src="/svg/kids3.svg" alt="girl with backpack"
+        className="absolute bottom-4 right-4"
+        style={{ width: '12vw', minWidth: '48px', maxWidth: '80px' }} />
+
+      {/* Main Content */}
+      <div className="w-full max-w-md text-center z-10">
+
+        {/* Heading */}
+        <img src="/svg/heading.svg" alt="Get Ready" className="mx-auto mb-4" style={{ width: '40vw', maxWidth: '200px', minWidth: '120px' }} />
+
+        {/* Email Input */}
+        <div className="flex items-center bg-white rounded-full shadow-md px-4 py-2 mb-4 w-full">
+          <img src="/svg/mail.svg" alt="mail" className="w-4 h-4 mr-2" />
+          <input
+            value={email}
+            onChange={(e) => setEmail(e.target.value)}
+            type="email"
+            placeholder="Enter your email"
+            className="w-full outline-none border-none text-sm sm:text-xs"
+          />
+        </div>
+
+        {/* Subscribe Button */}
+        <button
+          onClick={subscribe}
+          className="bg-[#4dbdcf] text-white font-bold px-8 py-2 text-sm rounded-full hover:bg-[#3caebf] transition duration-200 w-full sm:w-auto"
+        >
+          SUBSCRIBE
+        </button>
+      </div>
+
+      <ToastContainer />
     </div>
-
-    <button className="mt-4 bg-sky-400 hover:bg-sky-500 text-white font-semibold text-sm sm:text-base px-6 py-2 rounded-full">
-      SUBSCRIBE
-    </button>
-  </div>
-  
-<ToastContainer />
-
-</div>
-
-
   );
 }
 
