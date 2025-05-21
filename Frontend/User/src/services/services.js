@@ -15,7 +15,6 @@ export class Service{
     async addEmail({ email }){
         try {
             const data = await this.axiosInstance.post("/add-email",{email})
-            console.log("data:",data);
             
             if(data){
                 return true
