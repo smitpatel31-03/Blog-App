@@ -16,6 +16,7 @@ export default function Header() {
         <nav className="hidden md:flex space-x-6 text-zinc-300 font-medium">
           <Link to="/" className="hover:text-white">Home</Link>
           <Link to="/add-blog" className="hover:text-white">Add Blog</Link>
+          <Link to="/all-subscriber-mails" className="hover:text-white">All Subscribs Mails</Link>
         </nav>
 
         {/* Mobile Menu Button */}
