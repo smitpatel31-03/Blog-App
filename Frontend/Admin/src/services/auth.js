@@ -4,7 +4,7 @@ import conf from '../../conf/conf.js'
 export class AuthServices{
     constructor() {
         this.axiosInstance = axios.create({
-            baseURL: conf.apiurl || "http://localhost:8000/api/v1/admin",
+            baseURL: conf.apiurl || "https://blog-app-qazu.onrender.com",
             headers: {
                 "Content-Type": "application/json"
             },
@@ -32,7 +32,10 @@ export class AuthServices{
 
     async loginAdmin({email, password}){
         try {
-            const response = await this.axiosInstance.post(`login`, { email, password },{ withCredentials: true });
+
+            console.log("conf.apiurl :",conf.apiurl);
+            
+            const response = await this.axiosInstance.post(`/login`, { email, password },{ withCredentials: true });
               
             const {accessToken, refreshToken} = response.data.data
 
