@@ -7,10 +7,12 @@ const app = express()
 
 app.use(cors({
     origin: function (origin, callback) {
-        const allowedOrigins = [process.env.CORS_ORIGIN_ADMIN, process.env.CORS_ORIGIN_USER];
-        console.log("Incoming Origin:", origin);
-        console.log("Allowed Origins:", allowedOrigins);
-
+        const allowedOrigins = [
+            process.env.CORS_ORIGIN_ADMIN,
+            process.env.CORS_ORIGIN_USER
+        ];
+        
+        // Allow requests with no origin (like Postman or curl or same-origin calls)
         if (!origin || allowedOrigins.includes(origin)) {
             callback(null, origin);
         } else {
@@ -19,6 +21,7 @@ app.use(cors({
     },
     credentials: true
 }));
+
 
 
 
