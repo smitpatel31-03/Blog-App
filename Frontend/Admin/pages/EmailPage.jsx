@@ -20,7 +20,7 @@ const [allSubscriberMail, setAllSubscriberMail] = useState(null);
 
       console.log("allSubscriberMail :",allSubscriberMail);
       
-  }, [allSubscriberMail]);
+  }, []);
 
   return (
   <h1>hii</h1>
