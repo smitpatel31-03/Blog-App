@@ -4,7 +4,7 @@ import axios from "axios";
 export class Service{
     constructor() {
         this.axiosInstance = axios.create({
-            baseURL: conf.apiurl || "http://localhost:8000/api/v1/user",
+            baseURL: conf.apiurl || "https://blog-app-qazu.onrender.com/api/v1/user",
             headers: {
                 "Content-Type": "application/json"
             },
