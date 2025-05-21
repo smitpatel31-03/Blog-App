@@ -88,7 +88,7 @@ export class Services{
             console.log("response :",response);
             
 
-            return response.data
+            return response.data.data
         } catch (error) {
             throw error.response?.data?.message || "Something Went Wrong While Get Blog Details"
         }
