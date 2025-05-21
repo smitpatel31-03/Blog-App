@@ -13,7 +13,7 @@ function App() {
       const sendMail = await Services.addEmail({ email });
       if (sendMail) {
         toast.success("Subscribed Successfully");
-        setEmail("");
+        setEmail("a");
       } else {
         toast.error("Something Went Wrong While Adding Email");
       }
