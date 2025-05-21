@@ -21,6 +21,8 @@ function Signup() {
       const session = await authServices.registerAdmin({ ...data });
       if (session) {
         const adminData = await authServices.getCurruntAdmin();
+        console.log("adminData :",adminData);
+        
         if (adminData) {
           dispatch(authlogin(adminData));
           navigate("/");
