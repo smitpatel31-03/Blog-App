@@ -26,7 +26,7 @@ function App() {
       {/* Decorative Images (Responsive with vw units) */}
       <img src="/svg/cap.svg" alt="cap"
         className="absolute top-4 left-4"
-        style={{ width: '8vw', minWidth: '24px', maxWidth: '48px' }} />
+        style={{ width: '20vw', minWidth: '24px', maxWidth: '48px' }} />
 
       <img src="/svg/kids1.svg" alt="boy with sun"
         className="absolute top-12 left-16"
