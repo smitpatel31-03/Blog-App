@@ -7,16 +7,19 @@ const app = express()
 
 app.use(cors({
     origin: function (origin, callback) {
-        const allowedOrigins = [process.env.CORS_ORIGIN_ADMIN,process.env.CORS_ORIGIN_USER];
+        const allowedOrigins = [process.env.CORS_ORIGIN_ADMIN, process.env.CORS_ORIGIN_USER];
+        console.log("Incoming Origin:", origin);
+        console.log("Allowed Origins:", allowedOrigins);
 
         if (!origin || allowedOrigins.includes(origin)) {
-            callback(null, origin);  
+            callback(null, origin);
         } else {
             callback(new Error("Not allowed by CORS"));
         }
     },
     credentials: true
 }));
+
 
 
 app.use(express.json({ limit: "16kb" }))
