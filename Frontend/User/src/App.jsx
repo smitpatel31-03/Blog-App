@@ -65,7 +65,6 @@ function App() {
       SUBSCRIBE
     </button>
   </div>
-  
       <ToastContainer />
 
 </div>
