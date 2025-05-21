@@ -1,5 +1,5 @@
 import { Router } from "express";
-import {registerAdmin,loginAdmin,logoutAdmin,getCurruntAdmin,AdminsRefreshAccessToken,changeAdminCurruntPassword,addBlog,updateBlogDetails,getAllBlogs,getBlogDetails,deleteBlog} from "../controllers/admin.controller.js"
+import {registerAdmin,loginAdmin,logoutAdmin,getCurruntAdmin,AdminsRefreshAccessToken,changeAdminCurruntPassword,addBlog,updateBlogDetails,getAllBlogs,getBlogDetails,deleteBlog,getAllAubscriberMail} from "../controllers/admin.controller.js"
 import { verifyJWTAdmin } from "../middlewares/auth.admin.middleware.js"
 import { upload } from "../middlewares/multer.middleware.js"
 
@@ -26,5 +26,6 @@ router.route("/update-blog-details/:BlogId").patch(
 router.route("/getCurruntAdmin").get(verifyJWTAdmin, getCurruntAdmin)
 router.route("/get-all-blog").get(verifyJWTAdmin, getAllBlogs)
 router.route("/blog-details/:BlogId").get(verifyJWTAdmin, getBlogDetails)
+router.route("/all-subscriber-mail").get(verifyJWTAdmin, getAllAubscriberMail)
 
 export default router

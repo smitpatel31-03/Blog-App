@@ -80,6 +80,18 @@ export class Services{
             throw error.response?.data?.message || "Something Went Wrong While Adding Catagory"
         }
     }
+
+    async getAllSubmail(){
+        try {
+            const headers = authServices.getAuthHeaders()
+            console.log("response");
+            const response = await this.axiosInstance.get(`/all-subscriber-mail`,{headers})
+            
+            return response.data
+        } catch (error) {
+            throw error.response?.data?.message || "Something Went Wrong While Get Blog Details"
+        }
+    }
 }
 
 const Service = new Services()

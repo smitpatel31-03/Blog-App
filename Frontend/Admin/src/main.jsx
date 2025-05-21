@@ -1,7 +1,7 @@
 import { createRoot } from 'react-dom/client'
 import App from './App.jsx'
 import { createBrowserRouter,RouterProvider } from 'react-router'
-import {AddBlog,BlogInfo,Home,Login,Signup,UpdateBlog,AuthLayout} from '../pages/index.js'
+import {AddBlog,BlogInfo,Home,Login,Signup,UpdateBlog,AuthLayout,EmailPage} from '../pages/index.js'
 import { Provider } from 'react-redux';
 import store from './store/store.js'
 import './index.css'
@@ -56,6 +56,14 @@ const router = createBrowserRouter([
         element:(
           <AuthLayout authentication={true}>
             <UpdateBlog />
+          </AuthLayout>
+        )
+      },
+      {
+        path:"/all-subscriber-mails",
+        element:(
+          <AuthLayout authentication={true}>
+            <EmailPage />
           </AuthLayout>
         )
       },

@@ -456,6 +456,27 @@ const getBlogDetails = asyncHandler(async (req, res) => {
         )
 })
 
+const getAllAubscriberMail = asyncHandler(async (req, res) => {
+
+    const AllAubscriberMail = await Blog.aggregate([
+        {
+            $project: {
+                email: 1,
+            }
+        }
+    ])
+
+    res
+        .status(200)
+        .json(
+            new ApiResponse(
+                201,
+                AllAubscriberMail[0],
+                "Blog Details"
+            )
+        )
+})
+
 const deleteBlog = asyncHandler(async (req,res)=>{
     const {BlogId} = req.params
 
@@ -484,5 +505,6 @@ export{
     updateBlogDetails,
     getAllBlogs,
     getBlogDetails,
-    deleteBlog
+    deleteBlog,
+    getAllAubscriberMail
 }
