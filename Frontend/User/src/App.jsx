@@ -21,7 +21,7 @@ function App() {
   };
 
   return (
-<div className="relative w-full h-screen bg-[#f5d9cc] overflow-hidden font-sans">
+<div className="relative w-full h-screen overflow-hidden font-sans">
       {/* Background Icons */}
       <img src="/svg/bg.svg" className="absolute inset-0 w-full h-full object-cover opacity-20 z-0" alt="bg" />
 
