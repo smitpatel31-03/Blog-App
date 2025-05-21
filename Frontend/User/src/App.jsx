@@ -11,71 +11,67 @@ function App() {
       toast.error("Please enter an email address");
     } else {
       const sendMail = await Services.addEmail({ email });
+
       if (sendMail) {
         toast.success("Subscribed Successfully");
-        setEmail("/");
+        setEmail(""); // Clear email after success
       } else {
-        toast.error("Something Went Wrong While Adding Email");
+        toast.error("Something went wrong while adding email");
       }
     }
   };
 
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
+      {/* Background */}
+      <img src="/svg/bg.svg" alt="background" className="absolute inset-0 w-full h-full object-cover" />
 
-  {/* Background texture */}
-  <img
-    src="/svg/bg.svg"
-    alt="background"
-    className="absolute inset-0 w-full h-full object-cover opacity-10 z-0"
-  />
+      {/* Floating SVG elements */}
+      <img src="/svg/cap.svg" className="absolute top-4 left-10 w-20 sm:w-75 sm:top-4 sm:left-80" />
+      <img src="/svg/pencil1.svg" className="absolute top-4 left-35 w-25 sm:w-70 sm:top-10 sm:left-175" />
+      <img src="/svg/notebook.svg" className="absolute top-2 left-60 w-30 sm:w-80 sm:top-2 sm:left-250" />
+      <img src="/svg/pencil2.svg" className="absolute top-5 left-85 w-25 sm:w-70 sm:top-10 sm:left-310" />
+      <img src="/svg/kids1.svg" className="absolute top-30 w-30 sm:w-75 sm:top-30 sm:left-5" />
+      <img src="/svg/hands.svg" className="absolute top-20 left-6 w-14 sm:w-20" />
+      <img src="/svg/pencil3.svg" className="absolute top-115 left-4 w-20 sm:w-40 sm:left-85 sm:top-110" />
 
-  {/* Floating SVG elements from your original design */}
-  {/* Top Left */}
-  <img src="/svg/cap.svg" className="absolute top-4 left-4 w-12 sm:w-16" />
-  <img src="/svg/hands.svg" className="absolute top-20 left-6 w-14 sm:w-20" />
+      {/* Center Content */}
+      <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4">
+        <img src="/svg/heading.svg" className="flex justify-center w-50 sm:w-150" />
 
-  {/* Top Right */}
-  <img src="/svg/kids3.svg" className="absolute top-4 right-10 w-14 sm:w-20" />
-  <img src="/svg/pencil1.svg" className="absolute top-28 right-6 w-10 sm:w-14" />
+        {/* First input box */}
+        <div className="mt-6 w-full max-w-md">
+          <div className="flex mt-[-60px] items-center justify-center px-4 py-2 sm:mt-[-100px]">
+            <i className="fas fa-envelope text-gray-400 mr-2" />
+            <input
+              type="email"
+              placeholder="Enter your email"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              className="w-full border border-black rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm sm:text-base"
+            />
+          </div>
+          <button
+            className="mt-4 bg-sky-400 hover:bg-sky-500 text-white font-semibold text-sm sm:text-base px-6 py-2 rounded-full"
+            onClick={subscribe}
+          >
+            SUBSCRIBE
+          </button>
+        </div>
 
-  {/* Bottom Left */}
-  <img src="/svg/notebook.svg" className="absolute bottom-24 left-6 w-12 sm:w-16" />
-  <img src="/svg/kids1.svg" className="absolute bottom-6 left-4 w-14 sm:w-20" />
-
-  {/* Bottom Right */}
-  <img src="/svg/kids2.svg" className="absolute bottom-4 right-4 w-14 sm:w-20" />
-  <img src="/svg/pencil3.svg" className="absolute bottom-20 right-16 w-10 sm:w-14" />
-  <img src="/svg/comaps.svg" className="absolute bottom-40 right-4 w-10 sm:w-14" />
-
-  {/* Center Content */}
-  <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4">
-    <h1 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-red-600">
-      GET READY!
-    </h1>
-    <p className="mt-2 text-sm sm:text-base text-gray-600">
-      Something amazing is coming soon
-    </p>
-
-    <div className="mt-6 w-full max-w-md">
-      <div className="flex items-center bg-white shadow-md rounded-full px-4 py-2">
-        <i className="fas fa-envelope text-gray-400 mr-2" />
-        <input
-          type="email"
-          placeholder="Enter your email"
-          className="w-full focus:outline-none text-sm sm:text-base"
-        />
+        
       </div>
-      <button className="mt-4 bg-sky-400 hover:bg-sky-500 text-white font-semibold text-sm sm:text-base px-6 py-2 rounded-full" onClick={subscribe}>
-        SUBSCRIBE
-      </button>
+
+      {/* Bottom SVGs */}
+      <img src="/svg/fyingNotebook.svg" className="absolute top-110 right-1 w-20 sm:w-60 sm:top-70" />
+      <img src="/svg/kids2.svg" className="absolute bottom-30 left-[-60px] w-50 sm:w-130 sm:left-[-150px]" />
+      <img src="/svg/hands.svg" className="absolute bottom-40 left-25 w-25 sm:w-50 sm:left-70" />
+      <img src="/svg/brush.svg" className="absolute bottom-30 left-45 w-25 sm:w-50 sm:left-150" />
+      <img src="/svg/comaps.svg" className="absolute bottom-40 z-1 left-65 w-25 sm:w-50 sm:left-210" />
+      <img src="/svg/kids3.svg" className="absolute bottom-30 right-[-50px] w-50 sm:w-130 sm:right-[-110px]" />
+
+      <ToastContainer />
     </div>
-  </div>
-  
-<ToastContainer/>
-</div>
-
-
   );
 }
 
