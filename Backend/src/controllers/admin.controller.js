@@ -467,6 +467,8 @@ const getAllAubscriberMail = asyncHandler(async (req, res) => {
         }
     ])
 
+    console.log("AllAubscriberMail :",AllAubscriberMail);
+    
     res
         .status(200)
         .json(
