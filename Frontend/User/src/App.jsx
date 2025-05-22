@@ -54,7 +54,7 @@ function App() {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-50 border border-black rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm sm:text-base sm:w-full"
+              className="w-10 border border-black rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm sm:text-base sm:w-full"
             />
           </div>
           <button
