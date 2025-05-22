@@ -45,7 +45,7 @@ function App() {
         <img src="/svg/heading.svg" className="flex justify-center w-50 sm:w-150" />
 
         {/* First input box */}
-        <div className="mt-6 w-100 sm:max-w-md">
+        <div className="mt-6 w-80 sm:max-w-md">
           <div className="flex mt-[-60px] items-center justify-center px-4 py-2 sm:mt-[-100px]">
             <i className="fas fa-envelope text-gray-400 mr-2" />
             <input
