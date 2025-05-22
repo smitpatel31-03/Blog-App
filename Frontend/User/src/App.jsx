@@ -7,7 +7,7 @@ function App() {
   const [email, setEmail] = useState("");
 
   const subscribe = async (e) => {
-    // e.preventDefault()
+    e.preventDefault()
     if (email.trim() === "") {
       toast.error("Please enter an email address");
     } else {
@@ -53,8 +53,8 @@ function App() {
             />
           </div>
           <button
-            className="mt-4 bg-sky-400 hover:bg-sky-500 text-white font-semibold text-sm sm:text-base px-6 py-2 rounded-full"
-            onSubmit={subscribe}
+          type='submit'
+          className="mt-4 bg-sky-400 hover:bg-sky-500 text-white font-semibold text-sm sm:text-base px-6 py-2 rounded-full"  
           >
             SUBSCRIBE
           </button>
