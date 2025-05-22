@@ -38,7 +38,7 @@ function App() {
       <img src="/svg/notebook.svg" className="absolute top-2 left-60 w-30 sm:w-80 sm:top-2 sm:left-250" />
       <img src="/svg/pencil2.svg" className="absolute top-5 left-85 w-25 sm:w-70 sm:top-10 sm:left-310" />
       <img src="/svg/kids1.svg" className="absolute top-30 w-30 sm:w-75 sm:top-30 sm:left-5" />
-      <img src="/svg/pencil3.svg" className="absolute top-115 left-4 w-20 sm:w-40 sm:left-85 sm:top-110" />
+      <img src="/svg/pencil3.svg" className="absolute top-100 left-8 w-25 sm:w-40 sm:left-85 sm:top-110" />
 
       {/* Center Content */}
       <div className="relative z-10 flex flex-col items-center justify-center min-h-screen text-center px-4">
@@ -69,11 +69,11 @@ function App() {
       </div>
 
       {/* Bottom SVGs */}
-      <img src="/svg/fyingNotebook.svg" className="absolute top-110 right-1 w-20 sm:w-60 sm:top-70" />
+      <img src="/svg/fyingNotebook.svg" className="absolute top-100 right-1 w-30 sm:w-60 sm:top-70" />
       <img src="/svg/kids2.svg" className="absolute bottom-30 left-[-60px] w-50 sm:w-130 sm:left-[-150px]" />
       <img src="/svg/hands.svg" className="absolute bottom-40 left-25 w-25 sm:w-50 sm:left-70" />
       <img src="/svg/brush.svg" className="absolute bottom-30 left-45 w-25 sm:w-50 sm:left-150" />
-      <img src="/svg/comaps.svg" className="absolute bottom-40 z-1 left-65 w-25 sm:w-50 sm:left-210" />
+      <img src="/svg/comaps.svg" className="absolute bottom-80 z-1 left-50 w-25 sm:w-50 sm:left-210" />
       <img src="/svg/kids3.svg" className="absolute bottom-30 right-[-50px] w-50 sm:w-130 sm:right-[-110px]" />
 
       <ToastContainer />
