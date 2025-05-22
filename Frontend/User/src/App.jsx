@@ -54,7 +54,7 @@ function App() {
           </div>
           <button
           type='submit'
-          className="mt-4 bg-sky-400 hover:bg-sky-500 text-white font-semibold text-sm sm:text-base px-6 py-2 rounded-full"  
+          className="mt-5 bg-sky-400 hover:bg-sky-500 text-white font-semibold text-sm sm:text-base px-6 py-2 rounded-full"  
           >
             SUBSCRIBE
           </button>
