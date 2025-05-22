@@ -38,7 +38,6 @@ function App() {
       <img src="/svg/notebook.svg" className="absolute top-2 left-60 w-30 sm:w-80 sm:top-2 sm:left-250" />
       <img src="/svg/pencil2.svg" className="absolute top-5 left-85 w-25 sm:w-70 sm:top-10 sm:left-310" />
       <img src="/svg/kids1.svg" className="absolute top-30 w-30 sm:w-75 sm:top-30 sm:left-5" />
-      <img src="/svg/hands.svg" className="absolute top-20 left-6 w-14 sm:w-20" />
       <img src="/svg/pencil3.svg" className="absolute top-115 left-4 w-20 sm:w-40 sm:left-85 sm:top-110" />
 
       {/* Center Content */}
@@ -46,7 +45,7 @@ function App() {
         <img src="/svg/heading.svg" className="flex justify-center w-50 sm:w-150" />
 
         {/* First input box */}
-        <div className="mt-6 w-50 sm:max-w-md">
+        <div className="mt-6 w-100 sm:max-w-md">
           <div className="flex mt-[-60px] items-center justify-center px-4 py-2 sm:mt-[-100px]">
             <i className="fas fa-envelope text-gray-400 mr-2" />
             <input
