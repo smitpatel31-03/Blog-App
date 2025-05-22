@@ -35,8 +35,8 @@ function App() {
       {/* Floating SVG elements */}
       <img src="/svg/cap.svg" className="absolute top-4 left-10 w-20 sm:w-75 sm:top-4 sm:left-80" />
       <img src="/svg/pencil1.svg" className="absolute top-4 left-35 w-25 sm:w-70 sm:top-10 sm:left-175" />
-      <img src="/svg/notebook.svg" className="absolute z-1 top-2 left-60 w-30 sm:w-80 sm:top-2 sm:left-250" />
-      <img src="/svg/pencil2.svg" className="absolute top-15 left-75 w-25 sm:w-70 sm:top-10 sm:left-310" />
+      <img src="/svg/notebook.svg" className="absolute top-2 left-60 w-30 sm:w-80 sm:top-2 sm:left-250" />
+      <img src="/svg/pencil2.svg" className="absolute z-1 top-15 left-75 w-25 sm:w-70 sm:top-10 sm:left-310" />
       <img src="/svg/kids1.svg" className="absolute top-30 w-30 sm:w-75 sm:top-30 sm:left-5" />
       <img src="/svg/pencil3.svg" className="absolute top-100 left-6 w-25 sm:w-40 sm:left-85 sm:top-110" />
 
