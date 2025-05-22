@@ -46,7 +46,7 @@ function App() {
         <img src="/svg/heading.svg" className="flex justify-center w-50 sm:w-150" />
 
         {/* First input box */}
-        <div className="mt-6 w-full max-w-md">
+        <div className="mt-6 w-50 sm:max-w-md">
           <div className="flex mt-[-60px] items-center justify-center px-4 py-2 sm:mt-[-100px]">
             <i className="fas fa-envelope text-gray-400 mr-2" />
             <input
@@ -54,7 +54,7 @@ function App() {
               placeholder="Enter your email"
               value={email}
               onChange={(e) => setEmail(e.target.value)}
-              className="w-10 border border-black rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm sm:text-base sm:w-full"
+              className="w-full border border-black rounded-md px-4 py-2 focus:outline-none focus:ring-2 focus:ring-sky-500 text-sm sm:text-base sm:w-full"
             />
           </div>
           <button
