@@ -7,7 +7,7 @@ function App() {
   const [email, setEmail] = useState("");
 
   const subscribe = async (e) => {
-    e.preventDefault()
+    // e.preventDefault()
     if (email.trim() === "") {
       toast.error("Please enter an email address");
     } else {
