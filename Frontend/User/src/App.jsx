@@ -73,7 +73,7 @@ function App() {
       <img src="/svg/kids2.svg" className="absolute bottom-30 left-[-60px] w-50 sm:w-130 sm:left-[-150px]" />
       <img src="/svg/hands.svg" className="absolute bottom-40 left-25 w-25 sm:w-50 sm:left-70" />
       <img src="/svg/brush.svg" className="absolute bottom-30 left-45 w-25 sm:w-50 sm:left-150" />
-      <img src="/svg/comaps.svg" className="absolute bottom-80 z-1 left-50 w-25 sm:w-50 sm:left-210" />
+      <img src="/svg/comaps.svg" className="absolute bottom-50 z-1 left-50 w-25 sm:w-50 sm:left-210" />
       <img src="/svg/kids3.svg" className="absolute bottom-30 right-[-50px] w-50 sm:w-130 sm:right-[-110px]" />
 
       <ToastContainer />
