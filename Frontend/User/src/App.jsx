@@ -7,20 +7,25 @@ function App() {
   const [email, setEmail] = useState("");
 
   const subscribe = async (e) => {
-    e.preventDefault()
-    if (email.trim() === "") {
-      toast.error("Please enter an email address");
-    } else {
-      const sendMail = await Services.addEmail({ email });
+  e.preventDefault();
 
-      if (sendMail) {
-        toast.success("Subscribed Successfully");
-        setEmail(""); // Clear email after success
-      } else {
-        toast.error("Something went wrong while adding email");
-      }
-    }
-  };
+  if (email.trim() === "") {
+    toast.error("Please enter an email address");
+    return;
+  }
+
+  const response = await Services.addEmail({ email });
+
+  if (response.status === 200) {
+    toast.success("Subscribed Successfully");
+    setEmail("");
+  } else if (response.status === 409) {
+    toast.info(response.data.message); // "Email already subscribed"
+  } else {
+    toast.error("Something went wrong");
+  }
+};
+
 
   return (
     <div className="relative w-full min-h-screen bg-white overflow-hidden">
